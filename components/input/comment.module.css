@@ -1,0 +1,22 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.comment button {
+  font: inherit;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: #03be9f;
+  border: 1px solid #03be9f;
+  cursor: pointer;
+}
+
+.comment button:hover,
+.comment button:active {
+  background-color: #dcfff9;
+}
