@@ -68,8 +68,6 @@ export async function getServerSideProps(context) {
                 data: events.event,
                 listComment: events.listComment
             },
-            // revalidate: 10
-
             // notFound:true,
             // redirect:'/404'
         }

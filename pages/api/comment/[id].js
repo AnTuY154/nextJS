@@ -32,19 +32,14 @@ async function handler(req, res) {
         client.close();
         res.status(201).json({ message: 'Success!', listComment: listComment })
     } else if (req.method === 'GET') {
-
         const client = await connectDB();
         const db = client.db();
         const listComment = await db.collection('comment').find({ eventID: req.query.id }).toArray();
         client.close();
-
-
-
         const id = req.query.id;
         const filePath = buildPath();
         const data = getAllData(filePath);
         const event = data.find((item) => item.id === id);
-
         res.status(200).json({ event: event, listComment: listComment })
     }
 
